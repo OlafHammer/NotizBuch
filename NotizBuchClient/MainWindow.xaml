@@ -1,0 +1,39 @@
+﻿<Window x:Class="NotizBuchClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotizBuchClient"
+        mc:Ignorable="d"
+        Title="Login" Height="165" Width="205">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="UserField" BorderBrush="Black" VerticalContentAlignment="Center" Padding="5,0,0,0" LostFocus="UserFieldLostFocus"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="UserFieldInfo" Text="User" HorizontalAlignment="Left" Width="180" Padding="5,5,0,0" Foreground="#FFA2A2A2" MouseDown="UserFieldInfoMouseDown"/>
+
+        <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="PasswordField" BorderBrush="Black" LostFocus="PasswordBoxLostFocus" Padding="5,0,0,0" VerticalContentAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" x:Name="PasswordFieldInfo" Text="Password" HorizontalAlignment="Left" Width="180" Padding="5,5,0,0" Foreground="#FFA2A2A2" MouseDown="PasswordFieldInfoMouseDown" />
+
+        <Button Grid.Row="5" Grid.Column="1" Content="Login" Click="LoginButtonClicked" BorderBrush="Black" Background="White"/>
+        <Button Grid.Row="7" Grid.Column="1" Content="Create" Click="CreateButtonClicked" BorderBrush="Black" Background="White"/>
+
+    </Grid>
+</Window>
